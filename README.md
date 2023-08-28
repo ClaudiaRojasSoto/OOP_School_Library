@@ -49,6 +49,7 @@ The project is built using the following technologies:
 - **Classes**
 - **Rubocop install**
 - **Gems install**
+- **"Decorator" design pattern**
 
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
@@ -91,7 +92,6 @@ git clone https://github.com/ClaudiaRojasSoto/School_Library.git
 
 ## 🔭 Future Features <a name="future-features"></a>
 
-- [ ] **"Decorator" design pattern**
 - [ ] **Associations**
 - [ ] **Basic UI**
 - [ ] **Refactor of code**
