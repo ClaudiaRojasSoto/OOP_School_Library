@@ -48,12 +48,13 @@ class App
     age = gets.chomp.to_i
 
     print 'Classroom: '
-    classroom = Classroom.new(gets.chomp)
+    classroom_name = gets.chomp
+    classroom = Classroom.new(classroom_name)
 
     print 'Has parent permission? [Y/N]: '
     parent_permission = gets.chomp.downcase == 'y'
 
-    Student.new(name, age, classroom, parent_permission)
+    Student.new(name, age, classroom, parent_permission: parent_permission)
   end
 
   def create_teacher
@@ -112,5 +113,10 @@ class App
         puts "Date: #{rental.date}, Book: #{rental.book.title} by #{rental.book.author}"
       end
     end
+  end
+
+  def exit_app
+    puts 'Exiting the application. Goodbye!'
+    exit
   end
 end
