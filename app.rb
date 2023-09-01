@@ -95,7 +95,7 @@ class App
     print 'Date: '
     date = gets.chomp
 
-    @rentals << Rental.new(date, @books[book_index], @people[person_index])
+    @rentals << Rental.new(date, @books[person_index], @people[person_index])
     puts 'Rental created successfully'
   end
 
