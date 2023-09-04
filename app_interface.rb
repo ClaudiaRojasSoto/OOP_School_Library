@@ -11,23 +11,24 @@ class AppInterface
     7 => :exit_app
   }.freeze
 
-end
-
-def initialize(app)
+  def initialize(app)
     @app = app
   end
+
   def run
     loop do
       option = display_menu
       handle_option(option)
     end
   end
+
   def display_menu
     puts "\nPlease choose an option:"
     ACTIONS.each { |key, value| puts "#{key} - #{value.to_s.tr('_', ' ')}" }
     print 'Option: '
     gets.chomp.to_i
   end
+
   def handle_option(option)
     action = ACTIONS[option]
     if action
@@ -36,3 +37,4 @@ def initialize(app)
       puts 'Invalid option. Please try again.'
     end
   end
+end
