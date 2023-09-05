@@ -7,6 +7,13 @@ class Teacher < Person
     @specialization = specialization
   end
 
+  # Método to_h agregado
+  def to_h
+    super.merge({
+                  'specialization' => @specialization
+                })
+  end
+
   def can_use_services?
     true
   end
