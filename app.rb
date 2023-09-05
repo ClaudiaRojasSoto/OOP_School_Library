@@ -1,3 +1,5 @@
+require_relative 'json'
+require_relative 'fileutils'
 require_relative 'book'
 require_relative 'person'
 require_relative 'student'
@@ -9,10 +11,12 @@ class App
   attr_accessor :books, :people, :rentals
 
   def initialize
+    FileUtils.mkdir_p('./data')
     @books = []
     @people = []
     @rentals = []
-  end
+    load_from_files
+  end
 
   def list_books
     @books.each { |book| puts "Title: #{book.title}, Author: #{book.author}" }
@@ -117,6 +121,14 @@ class App
 
   def exit_app
     puts 'Exiting the application. Goodbye!'
+    save_to_files
     exit
+  end
+
+  def save_to_files
+    File.write('./data/books.json', JSON.dump(@books.map(&:to_h)))
+    File.write('./data/people.json', JSON.dump(@people.map(&:to_h)))
+    rental_data = @rentals.map(&:to_h)
+    File.write('./data/rentals.json', JSON.dump(rental_data))
   end
 end
