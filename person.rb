@@ -7,8 +7,8 @@ require_relative 'rental'
 
 # Class representing a person
 class Person < Nameable
-  attr_accessor :name, :age, :rentals
-  attr_reader :id, :classroom
+  attr_accessor :name, :age, :rentals, :id
+  attr_reader :classroom
 
   def initialize(name, age = 'Unknown', parent_permission: true)
     super()
@@ -36,16 +36,19 @@ class Person < Nameable
     @parent_permission || of_age?
   end
 
+  # Método to_h agregado
+  def to_h
+    {
+      'id' => @id,
+      'name' => @name,
+      'age' => @age,
+      'parent_permission' => @parent_permission
+    }
+  end
+
   private
 
   def of_age?
     @age >= 18
   end
 end
-
-person = Person.new('maximilianus', 22)
-puts person.correct_name
-capitalized_person = CapitalizeDecorator.new(person)
-puts capitalized_person.correct_name
-capitalized_trimmed_person = TrimmerDecorator.new(capitalized_person)
-puts capitalized_trimmed_person.correct_name
