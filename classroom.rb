@@ -9,8 +9,10 @@ class Classroom
   end
 
   def add_student(student)
+    return if @students.include?(student) # Avoid duplicates
+
     @students << student
-    student.classroom = self
+    student.classroom = self unless student.classroom == self # Check to avoid recursion
   end
 
   def to_h
