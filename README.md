@@ -51,6 +51,9 @@ The project is built using the following technologies:
 - **"Decorator" design pattern**
 - **Associations**
 - **Basic UI**
+- **Refactor of code**
+- **Preserve data**
+- **Unit tests**
 
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
@@ -76,23 +79,13 @@ git clone https://github.com/ClaudiaRojasSoto/School_Library.git
 -   GitHub: [@githubhandle](https://github.com/ClaudiaRojasSoto)
 -   LinkedIn: [LinkedIn](https://www.linkedin.com/in/claudia-rojas-soto/)
 
-👤 **Manuel Sánchez**
--   GitHub: [@githubhandle](https://github.com/Luffytaro22)
--   LinkedIn: [LinkedIn](https://www.linkedin.com/in/manuel-alejandro-sanchez-sierra)
-
-👤 **Alibaba2023**
--   GitHub: [@githubhandle](https://github.com/Alibaba2023)
--   LinkedIn: [LinkedIn](https://www.linkedin.com/in/ali-baba-hussaini/)
-
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 <!-- FUTURE FEATURES -->
 
 ## 🔭 Future Features <a name="future-features"></a>
 
-- [ ] **Refactor of code**
-- [ ] **Preserve data**
-- [ ] **Unit tests**
+- [ ] ***
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
