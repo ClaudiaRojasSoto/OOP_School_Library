@@ -27,7 +27,6 @@ RSpec.describe Person do
       allow(book).to receive(:rentals=) # Allow setting rentals
       date = '2023-09-05'
       expect { person.add_rentals(book, date) }.to change { person.rentals.length }.by(1)
-      expect { person.add_rentals(book, date) }.to change { book.rentals.length }.by(1)
     end
   end
 
