@@ -3,13 +3,14 @@ class Rental
   attr_accessor :date, :book, :person
 
   def initialize(date, book, person)
-    return unless book && person # Return if book or person is nil
+    raise 'Book and person are required' unless book && person # Cambio aquí
 
     @date = date
     @book = book
     @person = person
 
     book.rentals << self
+    person.rentals << self unless person.rentals.include?(self) # Cambio aquí
   end
 
   def to_h
