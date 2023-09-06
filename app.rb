@@ -1,5 +1,5 @@
 require 'json'
-require 'fileutils' # Línea agregada: para crear la carpeta
+require 'fileutils'
 require_relative 'book'
 require_relative 'person'
 require_relative 'student'
@@ -11,11 +11,11 @@ class App
   attr_accessor :books, :people, :rentals
 
   def initialize
-    FileUtils.mkdir_p('./data') # Línea agregada: crea la carpeta 'data' si no existe
+    FileUtils.mkdir_p('./data')
     @books = []
     @people = []
     @rentals = []
-    load_from_files # Línea agregada: carga datos al iniciar la app
+    load_from_files
   end
 
   def list_books
@@ -125,7 +125,7 @@ class App
     exit
   end
 
-  # Nuevas funciones agregadas para manejar JSON
+  # Add new functions to handle JSON
   def save_to_files
     File.write('./data/books.json', JSON.dump(@books.map(&:to_h)))
     File.write('./data/people.json', JSON.dump(@people.map(&:to_h)))

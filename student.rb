@@ -12,10 +12,9 @@ class Student < Person
     classroom.add_student(self) unless classroom.students.include?(self)
   end
 
-  # Método to_h agregado
   def to_h
     super.merge({
-                  classroom: @classroom.label # Cambiado para evitar la recursividad
+                  classroom: @classroom.label
                 })
   end
 
