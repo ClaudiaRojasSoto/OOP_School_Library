@@ -2,6 +2,7 @@ GEM
   specs:
     ast (2.4.2)
     base64 (0.1.1)
+    diff-lcs (1.5.0)
     json (2.6.3)
     language_server-protocol (3.17.0.3)
     parallel (1.23.0)
@@ -12,6 +13,19 @@ GEM
     rainbow (3.1.1)
     regexp_parser (2.8.1)
     rexml (3.2.6)
+    rspec (3.12.0)
+      rspec-core (~> 3.12.0)
+      rspec-expectations (~> 3.12.0)
+      rspec-mocks (~> 3.12.0)
+    rspec-core (3.12.2)
+      rspec-support (~> 3.12.0)
+    rspec-expectations (3.12.3)
+      diff-lcs (>= 1.2.0, < 2.0)
+      rspec-support (~> 3.12.0)
+    rspec-mocks (3.12.5)
+      diff-lcs (>= 1.2.0, < 2.0)
+      rspec-support (~> 3.12.0)
+    rspec-support (3.12.0)
     rubocop (1.56.1)
       base64 (~> 0.1.1)
       json (~> 2.3)
@@ -30,10 +44,11 @@ GEM
     unicode-display_width (2.4.2)
 
 PLATFORMS
-  x64-mingw-ucrt
+  x64-unknown
   x86_64-darwin-22
 
 DEPENDENCIES
+  rspec (~> 3.0)
   rubocop (>= 1.0, < 2.0)
 
 BUNDLED WITH
